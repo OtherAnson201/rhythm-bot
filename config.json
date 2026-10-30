@@ -1,0 +1,102 @@
+{
+  "active": "2lane",
+  "profiles": {
+    "2lane": {
+      "receptor_y": 856,
+      "lane_half_width": 30,
+      "hit_above": 22,
+      "hit_below": 0,
+      "strip_height": 260,
+      "min_strip_seconds": 0.5,
+      "bar_min_px": 60,
+      "bar_gap_tol": 6,
+      "brightness_min": 120,
+      "hue_tol": 50,
+      "row_fill": 0.25,
+      "hit_fill_ratio": 0.6,
+      "seam_drop": 0.55,
+      "seam_abs_floor": 0.12,
+      "min_note_px": 14,
+      "fall_speed": 255,
+      "press_lead": 0.188,
+      "min_press": 0.008,
+      "tap_press": 0.012,
+      "repress_gap": 0.006,
+      "max_press_age": 0.06,
+      "panic_key": "f8",
+      "toggle_key": "f7",
+      "lanes": [
+        {
+          "name": "L",
+          "x": 887,
+          "key": "t",
+          "hue": "cyan"
+        },
+        {
+          "name": "R",
+          "x": 1034,
+          "key": "u",
+          "hue": "magenta"
+        }
+      ],
+      "head_px": 32,
+      "_calibrated": true
+    },
+    "4lane": {
+      "receptor_y": 855,
+      "lane_half_width": 30,
+      "hit_above": 22,
+      "hit_below": 0,
+      "strip_height": 260,
+      "min_strip_seconds": 0.5,
+      "bar_min_px": 60,
+      "bar_gap_tol": 6,
+      "brightness_min": 120,
+      "hue_tol": 50,
+      "row_fill": 0.25,
+      "hit_fill_ratio": 0.6,
+      "seam_drop": 0.55,
+      "seam_abs_floor": 0.12,
+      "min_note_px": 14,
+      "fall_speed": 255,
+      "press_lead": 0.188,
+      "min_press": 0.008,
+      "tap_press": 0.012,
+      "repress_gap": 0.006,
+      "max_press_age": 0.06,
+      "panic_key": "f8",
+      "toggle_key": "f7",
+      "lanes": [
+        {
+          "name": "1",
+          "x": 851,
+          "key": "x",
+          "hue": "violet"
+        },
+        {
+          "name": "2",
+          "x": 924,
+          "key": "c",
+          "hue": "magenta"
+        },
+        {
+          "name": "3",
+          "x": 996,
+          "key": "n",
+          "hue": "pink"
+        },
+        {
+          "name": "4",
+          "x": 1069,
+          "key": "m",
+          "hue": "orange"
+        }
+      ],
+      "_calibrated": true,
+      "head_px": 32,
+      "hue_tol_by_lane": {
+        "orange": 25
+      }
+    }
+  }
+}
