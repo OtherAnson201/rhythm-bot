@@ -1,6 +1,6 @@
 # Rhythm Bot
 
-Plays falling-note rhythm games on Roblox, in 2-lane (guitar) or 4-lane (bass, drums, keys) mode. It watches each lane's arrow colour on screen, works out when each note will land, and holds the key for exactly as long as a hold bar measures. It only reads the screen: no game memory is read and nothing is injected.
+Plays falling-note rhythm games, in 2-lane (guitar) or 4-lane (bass, drums, keys) mode. It watches each lane's arrow colour on screen, works out when each note will land, and holds the key for exactly as long as a hold bar measures. It only reads the screen: no game memory is read and nothing is injected.
 
 Also includes a small player for pasted virtual-piano sheets.
 
@@ -36,7 +36,7 @@ The menu shows the active mode and timing, and walks you through setup:
 
 While running, `F7` pauses and `F8` quits, and both release any held keys.
 
-2-lane and 4-lane are separate profiles in `config.json`. Positions are stored relative to the Roblox window, so it can move freely, but recalibrate if its size changes.
+2-lane and 4-lane are separate profiles in `config.json`. Positions are stored relative to the game window, so it can move freely, but recalibrate if its size changes.
 
 ## How it works
 
@@ -50,12 +50,11 @@ Each frame captures one tall strip per lane and matches pixels against that lane
 
 ### Speed
 
-Capturing from the Roblox window's own device context skips the desktop compositor:
+Capturing from the game's window own device context skips the desktop compositor:
 
 | Method | Per grab | Rate |
 |---|---|---|
 | Desktop DC | 11.5 ms | ~85/sec |
-| Roblox window DC | 0.27 ms | ~3700/sec |
 
 Key presses go out through `SendInput` with hardware scan codes on their own thread, so a slow call can't stall capture.
 
@@ -91,5 +90,3 @@ If two touching notes merge into one press, lower `seam_drop`. If a hold breaks 
 | `test_logic.py` | Offline tests |
 | `piano.py` | Virtual-piano sheet player |
 | `barlog.py`, `replay.py` | Log a run to a file, and replay it through the lane logic |
-
-Using a bot may break a game's rules, so use it at your own risk.
